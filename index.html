@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <body>
+  <head>
+    <style>
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .times-new-roman {
+        font-family: "Times New Roman", Times, serif;
+      }
+    </style>
+  </head>
     <button onclick="loadRandomImage()">Go</button>
     <div id="image-container"></div>
 
@@ -37,5 +48,10 @@
         imageContainer.innerHTML = '<img src="' + randomImageUrl + '" alt="Random Image">';
       }
     </script>
+
+  <body>
+    <div class="center">
+      <button class="times-new-roman" onclick="loadRandomImage()">Go</button>
+    </div>
   </body>
 </html>
