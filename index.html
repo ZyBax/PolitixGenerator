@@ -3,6 +3,8 @@
   <body>
     <button onclick="loadRandomImage()">Go</button>
     <div id="image-container"></div>
+
+    // I am not affiliated with any political candidates, and this is not work to support Vivek.
     <script>
       function loadRandomImage() {
         var imageUrls = [
@@ -16,21 +18,13 @@
           "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Vivek_Ramaswamy_%2853117635805%29.jpg/800px-Vivek_Ramaswamy_%2853117635805%29.jpg?20230815075142"
           "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Vivek_Ramaswamy_%2852588476210%29.jpg/800px-Vivek_Ramaswamy_%2852588476210%29.jpg?20230102002649"
           "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Vivek_Ramaswamy_at_The_Future_of_Biomedical_Research_in_Europe_Basel_Conference_2017_%28cropped%29.jpg/479px-Vivek_Ramaswamy_at_The_Future_of_Biomedical_Research_in_Europe_Basel_Conference_2017_%28cropped%29.jpg?20230905181741"
-      var imageUrls = [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Vivek_Ramaswamy_by_Gage_Skidmore.jpg/892px-Vivek_Ramaswamy_by_Gage_Skidmore.jpg?20230725195431",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Vivek_Ramaswamy_%2853117634935%29.jpg/1599px-Vivek_Ramaswamy_%2853117634935%29.jpg?20230815074907",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Vivek_Ramaswamy_%2853067677695%29.jpg/1599px-Vivek_Ramaswamy_%2853067677695%29.jpg?20230726031054",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Ron_DeSantis_US_Navy_Ensign.webp/640px-Ron_DeSantis_US_Navy_Ensign.webp.png",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Vivek_Ramaswamy_%2853117634955%29.jpg/800px-Vivek_Ramaswamy_%2853117634955%29.jpg?20230815074900",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Vivek_Ramaswamy_%2853116628722%29.jpg/800px-Vivek_Ramaswamy_%2853116628722%29.jpg?20230815075217",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Vivek_Ramaswamy_%2853117227666%29.jpg/800px-Vivek_Ramaswamy_%2853117227666%29.jpg?20230815075201",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Vivek_Ramaswamy_%2853117635805%29.jpg/800px-Vivek_Ramaswamy_%2853117635805%29.jpg?20230815075142",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Vivek_Ramaswamy_%2852588476210%29.jpg/800px-Vivek_Ramaswamy_%2852588476210%29.jpg?20230102002649"
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Vivek_Ramaswamy_at_The_Future_of_Biomedical_Research_in_Europe_Basel_Conference_2017_%28cropped%29.jpg/479px-Vivek_Ramaswamy_at_The_Future_of_Biomedical_Research_in_Europe_Basel_Conference_2017_%28cropped%29.jpg?20230905181741"
           "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Vivek_Ramaswamy_at_The_Future_of_Biomedical_Research_in_Europe_Basel_Conference_2017.jpg/315px-Vivek_Ramaswamy_at_The_Future_of_Biomedical_Research_in_Europe_Basel_Conference_2017.jpg?20200212184531"
           "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Vivek_Ramaswamy.jpg/449px-Vivek_Ramaswamy.jpg?20230505170449"
           "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Vivek_Ramaswamy_%2853117428574%29.jpg/800px-Vivek_Ramaswamy_%2853117428574%29.jpg?20230815074932"
-@@ -27,14 +24,15 @@
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Vivek_Ramaswamy_%2853117428344%29.jpg/800px-Vivek_Ramaswamy_%2853117428344%29.jpg?20230815074915"
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Vivek_Ramaswamy_%2852588045716%29.jpg/800px-Vivek_Ramaswamy_%2852588045716%29.jpg?20230102002650"
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Vivek_Ramaswamy_%2853067287941%29.jpg/800px-Vivek_Ramaswamy_%2853067287941%29.jpg?20230726031101"
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Vivek_Ramaswamy_%2853067287276%29.jpg/800px-Vivek_Ramaswamy_%2853067287276%29.jpg?20230726031050"
           // Add more URLs as needed (of anyone, most appropriate credit is avaliable on Wikimedia)
           // These were just some good images I found - feel free to fork, make a pull request, or make an issue to add more pictures of Vivek Ramaswamy!
           // I am not affiliated with any political candidates, and this is not work to support Vivek.
@@ -39,18 +33,9 @@
         var imageContainer = document.getElementById("image-container");
         var randomIndex = Math.floor(Math.random() * imageUrls.length);
         var randomImageUrl = imageUrls[randomIndex];
-
+        
         imageContainer.innerHTML = '<img src="' + randomImageUrl + '" alt="Random Image">';
       }
-      ];
-
-      var imageIndex = 0;
-      var imageContainer = document.getElementById("image-container");
-
-      setInterval(function() {
-        imageIndex = Math.floor(Math.random() * imageUrls.length);
-        imageContainer.innerHTML = `<img src="${imageUrls[imageIndex]}" alt="random-image" />`;
-      }, 3000);
     </script>
   </body>
 </html>
