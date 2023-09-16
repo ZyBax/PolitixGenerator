@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <button onclick="loadRandomImage()">Go</button>
+    <div id="image-container"></div>
+
+    <script>
+      function loadRandomImage() {
+        var imageUrls = [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Vivek_Ramaswamy_by_Gage_Skidmore.jpg/892px-Vivek_Ramaswamy_by_Gage_Skidmore.jpg?20230725195431",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Vivek_Ramaswamy_%2853117634935%29.jpg/1599px-Vivek_Ramaswamy_%2853117634935%29.jpg?20230815074907",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Vivek_Ramaswamy_%2853067677695%29.jpg/1599px-Vivek_Ramaswamy_%2853067677695%29.jpg?20230726031054",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Ron_DeSantis_US_Navy_Ensign.webp/640px-Ron_DeSantis_US_Navy_Ensign.webp.png"
+          // Add more URLs as needed (of anyone, most appropriate credit is avaliable on Wikimedia)
+        ];
+        
+        var imageContainer = document.getElementById("image-container");
+        var randomIndex = Math.floor(Math.random() * imageUrls.length);
+        var randomImageUrl = imageUrls[randomIndex];
+        
+        imageContainer.innerHTML = '<img src="' + randomImageUrl + '" alt="Random Image">';
+      }
+    </script>
+  </body>
+</html>
