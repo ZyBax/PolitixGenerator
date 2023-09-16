@@ -6,6 +6,7 @@
     <script>
       function loadRandomImage() {
         var imageUrls = [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Vivek_Ramaswamy_%2853067287276%29.jpg/800px-Vivek_Ramaswamy_%2853067287276%29.jpg?20230726031050"
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Vivek_Ramaswamy_by_Gage_Skidmore.jpg/892px-Vivek_Ramaswamy_by_Gage_Skidmore.jpg?20230725195431",
           "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Vivek_Ramaswamy_%2853117634935%29.jpg/1599px-Vivek_Ramaswamy_%2853117634935%29.jpg?20230815074907",
           "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Vivek_Ramaswamy_%2853067677695%29.jpg/1599px-Vivek_Ramaswamy_%2853067677695%29.jpg?20230726031054",
@@ -22,7 +23,6 @@
           "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Vivek_Ramaswamy_%2853117428344%29.jpg/800px-Vivek_Ramaswamy_%2853117428344%29.jpg?20230815074915"
           "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Vivek_Ramaswamy_%2852588045716%29.jpg/800px-Vivek_Ramaswamy_%2852588045716%29.jpg?20230102002650"
           "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Vivek_Ramaswamy_%2853067287941%29.jpg/800px-Vivek_Ramaswamy_%2853067287941%29.jpg?20230726031101"
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Vivek_Ramaswamy_%2853067287276%29.jpg/800px-Vivek_Ramaswamy_%2853067287276%29.jpg?20230726031050"
           // Add more URLs as needed (of anyone, most appropriate credit is avaliable on Wikimedia)
           // These were just some good images I found - feel free to fork, make a pull request, or make an issue to add more pictures of Vivek Ramaswamy!
           // I am not affiliated with any political candidates, and this is not work to support Vivek.
@@ -32,8 +32,14 @@
         var randomIndex = Math.floor(Math.random() * imageUrls.length);
         var randomImageUrl = imageUrls[randomIndex];
         
-        imageContainer.innerHTML = '<img src="' + randomImageUrl + '" alt="Random Image">';
+        var img = document.createElement("img");
+        img.src = randomImageUrl;
+        img.alt = "Random Image";
+        
+        imageContainer.innerHTML = "";
+        imageContainer.appendChild(img);
       }
     </script>
   </body>
 </html>
+
